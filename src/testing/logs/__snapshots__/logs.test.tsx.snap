@@ -33,6 +33,7 @@ exports[`LoggerPage snapshot 1`] = `
         Action Type
       </label>
       <select
+        aria-label="actionType"
         className="form-control"
         name="actionType"
         onChange={[Function]}

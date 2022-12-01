@@ -63,7 +63,7 @@ const LoggerFiltter = ({ actionTypes, applicationTypes, handleFilter }) => {
 
                 <div className="form-group w-100 me-3">
                     <label htmlFor="actionType">Action Type</label>
-                    <select value={filters.actionType} onChange={handleChangeInput} className="form-control" name="actionType">
+                    <select aria-label="actionType" value={filters.actionType} onChange={handleChangeInput} className="form-control" name="actionType">
                         <option value=""></option>
                         {actionTypes?.map((actionType, index) => (
                             <option key={index} value={actionType}>{actionType}</option>

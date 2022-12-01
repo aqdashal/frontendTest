@@ -1,15 +1,15 @@
 import React from 'react';
-import LoggerPage from '../../containers/logger';
+import LogsPage from '../../containers/logs';
 import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 
 describe('LoggerPage', () => {
     test('should render without crashing', () => {
-        render(<LoggerPage />);
+        render(<LogsPage />);
     })
 
     test("snapshot", () => {
-        const tree = renderer.create(<LoggerPage />).toJSON();
+        const tree = renderer.create(<LogsPage />).toJSON();
         expect(tree).toMatchSnapshot();
     })
     

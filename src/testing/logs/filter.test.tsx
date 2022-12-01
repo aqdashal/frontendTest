@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
-import LoggerFiltter from "../../containers/logger/filters";
+import LogsFiltter from "../../containers/logs/filters";
 import { actionTypes, applicationTypes } from "../data";
 
 describe('<LoggerFilter/>', () => {
@@ -15,7 +15,7 @@ describe('<LoggerFilter/>', () => {
     const setup = () =>
         render(
             <MemoryRouter>
-                <LoggerFiltter {...{ actionTypes: actionTypeList, applicationTypes: applicationTypeList, handleFilter }} />
+                <LogsFiltter {...{ actionTypes: actionTypeList, applicationTypes: applicationTypeList, handleFilter }} />
             </MemoryRouter>
         )
 
@@ -47,10 +47,19 @@ describe('<LoggerFilter/>', () => {
         expect(handleFilter).toBeCalledTimes(0);
     });
 
+    it("handleFilter should be called when search button clicked if filter selected", async () => {
+        setup();
+        const user = userEvent.setup();
+        const actionTypeSelect = screen.getByRole("combobox", { name: /actionType/i });
+        user.selectOptions(actionTypeSelect, actionTypeList[1]);
+        await user.click(screen.getByRole("button", { name: /search/i }));
+        expect(handleFilter).toBeCalledTimes(1);
+    });
+
     test("snapshot", () => {
         const tree = renderer.create(
             <MemoryRouter>
-                <LoggerFiltter {...{ actionTypes: actionTypeList, applicationTypes: applicationTypeList, handleFilter }} />
+                <LogsFiltter {...{ actionTypes: actionTypeList, applicationTypes: applicationTypeList, handleFilter }} />
             </MemoryRouter>
         ).toJSON();
         expect(tree).toMatchSnapshot();

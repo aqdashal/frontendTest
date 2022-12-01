@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { fetchLoggers } from "../../actions/loggerActions";
 import { handleSortData, handleFilterData } from "../../utils";
-import LoggerTable from "../../components/table";
-import LoggerFiltters from "../logger/filters";
+import LogsTable from "../../components/table";
+import LoggerFiltters from "./filters";
 import Pagination from "../../components/pagination";
 import './logger.scss';
 
-const Logger = () => {
+const Logs = () => {
 
     const [loggersData, setLoggers] = useState([]);
     const [apiError, setApiError] = useState({});
@@ -109,7 +109,7 @@ const Logger = () => {
                 handleFilter={handleFilter}
             />
             <div className="shadow">
-            <LoggerTable
+            <LogsTable
                 columns={columns}
                 data={currentTableData}
                 sortField={sortField}
@@ -128,4 +128,4 @@ const Logger = () => {
     )
 }
 
-export default Logger;
+export default Logs;
