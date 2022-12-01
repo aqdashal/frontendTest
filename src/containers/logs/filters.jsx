@@ -58,13 +58,13 @@ const LoggerFiltter = ({ actionTypes, applicationTypes, handleFilter }) => {
             <div className="d-flex align-items-end">
                 <div className="form-group w-100 me-3">
                     <label htmlFor="empName">Employee Name</label>
-                    <input value={filters.empName} onChange={handleChangeInput} type="text" className="form-control" name="empName" placeholder="" />
+                    <input  value={filters.empName} onChange={handleChangeInput} type="text" className="form-control" name="empName" placeholder="e.g admin user" />
                 </div>
 
                 <div className="form-group w-100 me-3">
                     <label htmlFor="actionType">Action Type</label>
                     <select aria-label="actionType" value={filters.actionType} onChange={handleChangeInput} className="form-control" name="actionType">
-                        <option value=""></option>
+                        <option value="">--select--</option>
                         {actionTypes?.map((actionType, index) => (
                             <option key={index} value={actionType}>{actionType}</option>
                         ))}
@@ -75,7 +75,7 @@ const LoggerFiltter = ({ actionTypes, applicationTypes, handleFilter }) => {
                 <div className="form-group w-100 me-3">
                     <label htmlFor="applicationType">Application Type</label>
                     <select value={filters.applicationType} onChange={handleChangeInput} className="form-control" name="applicationType">
-                        <option value=""></option>
+                        <option value="">--select--</option>
                         {
                             applicationTypes?.map((applicationType, index) => (
                                 <option key={index} value={applicationType}>{applicationType}</option>
@@ -99,7 +99,7 @@ const LoggerFiltter = ({ actionTypes, applicationTypes, handleFilter }) => {
 
                 <div className="form-group w-100 me-3">
                     <label htmlFor="applicationId">Application ID</label>
-                    <input value={filters.applicationId} onChange={handleChangeInput} type="text" className="form-control" name="applicationId" />
+                    <input value={filters.applicationId} placeholder="eg.173894756234504" onChange={handleChangeInput} type="text" className="form-control" name="applicationId" />
                 </div>
 
                 <div className="form-group w-100">
