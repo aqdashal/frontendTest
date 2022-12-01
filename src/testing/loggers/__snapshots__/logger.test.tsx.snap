@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoggerPage snapshot 1`] = `
+<div
+  className="container mt-4"
+>
+  <div
+    className="d-flex align-items-end"
+  >
+    <div
+      className="form-group w-100 me-3"
+    >
+      <label
+        htmlFor="empName"
+      >
+        Employee Name
+      </label>
+      <input
+        className="form-control"
+        name="empName"
+        onChange={[Function]}
+        placeholder=""
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group w-100 me-3"
+    >
+      <label
+        htmlFor="actionType"
+      >
+        Action Type
+      </label>
+      <select
+        className="form-control"
+        name="actionType"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        />
+      </select>
+    </div>
+    <div
+      className="form-group w-100 me-3"
+    >
+      <label
+        htmlFor="applicationType"
+      >
+        Application Type
+      </label>
+      <select
+        className="form-control"
+        name="applicationType"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        />
+      </select>
+    </div>
+    <div
+      className="form-group w-100 me-3"
+    >
+      <label
+        htmlFor="fromDate"
+      >
+        From Date
+      </label>
+      <input
+        className="form-control"
+        name="fromDate"
+        onChange={[Function]}
+        type="date"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group w-100 me-3"
+    >
+      <label
+        htmlFor="toDate"
+      >
+        To Date
+      </label>
+      <input
+        className="form-control"
+        name="toDate"
+        onChange={[Function]}
+        type="date"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group w-100 me-3"
+    >
+      <label
+        htmlFor="applicationId"
+      >
+        Application ID
+      </label>
+      <input
+        className="form-control"
+        name="applicationId"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group w-100"
+    >
+      <label
+        htmlFor="searchBtn"
+      />
+      <button
+        className="btn btn-primary d-block w-100"
+        name="searchBtn"
+        onClick={[Function]}
+        type="button"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+  <div
+    className="shadow"
+  >
+    <div
+      className="mt-4"
+    >
+      <table
+        className="w-100"
+      >
+        <thead>
+          <tr>
+            <th
+              className="default border-bottom"
+              onClick={[Function]}
+            >
+              Log ID
+              <span>
+                <img
+                  src="default.png"
+                />
+              </span>
+            </th>
+            <th
+              className="default border-bottom"
+              onClick={[Function]}
+            >
+              Application Type
+              <span>
+                <img
+                  src="default.png"
+                />
+              </span>
+            </th>
+            <th
+              className="default border-bottom"
+              onClick={[Function]}
+            >
+              Application ID
+              <span>
+                <img
+                  src="default.png"
+                />
+              </span>
+            </th>
+            <th
+              className="default border-bottom"
+              onClick={[Function]}
+            >
+              Action
+              <span>
+                <img
+                  src="default.png"
+                />
+              </span>
+            </th>
+            <th
+              className=" border-bottom"
+              onClick={null}
+            >
+              Action Details
+              <span>
+                <img />
+              </span>
+            </th>
+            <th
+              className="default border-bottom"
+              onClick={[Function]}
+            >
+              Date:Time
+              <span>
+                <img
+                  src="default.png"
+                />
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;

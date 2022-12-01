@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoggerFilter/> snapshot 1`] = `
+<div
+  className="d-flex align-items-end"
+>
+  <div
+    className="form-group w-100 me-3"
+  >
+    <label
+      htmlFor="empName"
+    >
+      Employee Name
+    </label>
+    <input
+      className="form-control"
+      name="empName"
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="form-group w-100 me-3"
+  >
+    <label
+      htmlFor="actionType"
+    >
+      Action Type
+    </label>
+    <select
+      className="form-control"
+      name="actionType"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      />
+      <option
+        value="DARI_REFRESH_TOKEN"
+      >
+        DARI_REFRESH_TOKEN
+      </option>
+      <option
+        value="DARI_APP_LOGIN"
+      >
+        DARI_APP_LOGIN
+      </option>
+      <option
+        value="INITIATE_APPLICATION"
+      >
+        INITIATE_APPLICATION
+      </option>
+      <option
+        value="SUBMIT_APPLICATION"
+      >
+        SUBMIT_APPLICATION
+      </option>
+      <option
+        value="ADD_EMPLOYEE"
+      >
+        ADD_EMPLOYEE
+      </option>
+    </select>
+  </div>
+  <div
+    className="form-group w-100 me-3"
+  >
+    <label
+      htmlFor="applicationType"
+    >
+      Application Type
+    </label>
+    <select
+      className="form-control"
+      name="applicationType"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      />
+      <option
+        value="CERT_TITLE_DEED_PLOT"
+      >
+        CERT_TITLE_DEED_PLOT
+      </option>
+      <option
+        value="LEASE_REGISTRATION"
+      >
+        LEASE_REGISTRATION
+      </option>
+      <option
+        value="ADD_POA"
+      >
+        ADD_POA
+      </option>
+      <option
+        value="ADD_COMPANY"
+      >
+        ADD_COMPANY
+      </option>
+      <option
+        value="ADD_COMPANY_EMPLOYEE"
+      >
+        ADD_COMPANY_EMPLOYEE
+      </option>
+      <option
+        value="CERT_PROP_OWNERSHIP"
+      >
+        CERT_PROP_OWNERSHIP
+      </option>
+      <option
+        value="LEASE_CLOSURE"
+      >
+        LEASE_CLOSURE
+      </option>
+    </select>
+  </div>
+  <div
+    className="form-group w-100 me-3"
+  >
+    <label
+      htmlFor="fromDate"
+    >
+      From Date
+    </label>
+    <input
+      className="form-control"
+      name="fromDate"
+      onChange={[Function]}
+      type="date"
+      value=""
+    />
+  </div>
+  <div
+    className="form-group w-100 me-3"
+  >
+    <label
+      htmlFor="toDate"
+    >
+      To Date
+    </label>
+    <input
+      className="form-control"
+      name="toDate"
+      onChange={[Function]}
+      type="date"
+      value=""
+    />
+  </div>
+  <div
+    className="form-group w-100 me-3"
+  >
+    <label
+      htmlFor="applicationId"
+    >
+      Application ID
+    </label>
+    <input
+      className="form-control"
+      name="applicationId"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="form-group w-100"
+  >
+    <label
+      htmlFor="searchBtn"
+    />
+    <button
+      className="btn btn-primary d-block w-100"
+      name="searchBtn"
+      onClick={[Function]}
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
