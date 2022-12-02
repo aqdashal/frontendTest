@@ -40,7 +40,10 @@ const LoggerFiltter = ({ actionTypes, applicationTypes, handleFilter }) => {
             fromDate,
             toDate } = filters;
         if (!actionType && !applicationType && !applicationId && !fromDate && !toDate && !empName) {
-            return
+            if (isFiltered) {
+                clearFilters();
+                return
+            }
         }
         handleFilter({
             ...(actionType && { actionType }),
@@ -58,7 +61,7 @@ const LoggerFiltter = ({ actionTypes, applicationTypes, handleFilter }) => {
             <div className="d-flex align-items-end">
                 <div className="form-group w-100 me-3">
                     <label htmlFor="empName">Employee Name</label>
-                    <input  value={filters.empName} onChange={handleChangeInput} type="text" className="form-control" name="empName" placeholder="e.g admin user" />
+                    <input value={filters.empName} onChange={handleChangeInput} type="text" className="form-control" name="empName" placeholder="e.g admin user" />
                 </div>
 
                 <div className="form-group w-100 me-3">
