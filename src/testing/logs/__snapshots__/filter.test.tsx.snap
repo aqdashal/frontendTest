@@ -16,7 +16,7 @@ exports[`<LoggerFilter/> snapshot 1`] = `
       className="form-control"
       name="empName"
       onChange={[Function]}
-      placeholder=""
+      placeholder="e.g admin user"
       type="text"
       value=""
     />
@@ -38,7 +38,9 @@ exports[`<LoggerFilter/> snapshot 1`] = `
     >
       <option
         value=""
-      />
+      >
+        --select--
+      </option>
       <option
         value="DARI_REFRESH_TOKEN"
       >
@@ -82,7 +84,9 @@ exports[`<LoggerFilter/> snapshot 1`] = `
     >
       <option
         value=""
-      />
+      >
+        --select--
+      </option>
       <option
         value="CERT_TITLE_DEED_PLOT"
       >
@@ -164,6 +168,7 @@ exports[`<LoggerFilter/> snapshot 1`] = `
       className="form-control"
       name="applicationId"
       onChange={[Function]}
+      placeholder="eg.173894756234504"
       type="text"
       value=""
     />

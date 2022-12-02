@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableHead/> snapshot 1`] = `
+<thead>
+  <tr>
+    <th
+      className="default border-bottom"
+      onClick={[Function]}
+    >
+      Log ID
+      <span>
+        <img
+          src="default.png"
+        />
+      </span>
+    </th>
+    <th
+      className="default border-bottom"
+      onClick={[Function]}
+    >
+      Application Type
+      <span>
+        <img
+          src="default.png"
+        />
+      </span>
+    </th>
+    <th
+      className="default border-bottom"
+      onClick={[Function]}
+    >
+      Application ID
+      <span>
+        <img
+          src="default.png"
+        />
+      </span>
+    </th>
+    <th
+      className="default border-bottom"
+      onClick={[Function]}
+    >
+      Action
+      <span>
+        <img
+          src="default.png"
+        />
+      </span>
+    </th>
+    <th
+      className=" border-bottom"
+      onClick={null}
+    >
+      Action Details
+      <span>
+        <img />
+      </span>
+    </th>
+    <th
+      className="default border-bottom"
+      onClick={[Function]}
+    >
+      Date:Time
+      <span>
+        <img
+          src="default.png"
+        />
+      </span>
+    </th>
+  </tr>
+</thead>
+`;

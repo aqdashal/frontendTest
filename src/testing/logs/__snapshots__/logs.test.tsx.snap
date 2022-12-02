@@ -4,6 +4,38 @@ exports[`LoggerPage snapshot 1`] = `
 <div
   className="container mt-4"
 >
+  <nav
+    aria-label="breadcrumb"
+    className="pb-2"
+    style={
+      Object {
+        "--bs-breadcrumb-divider": ">",
+      }
+    }
+  >
+    <ol
+      className="breadcrumb"
+    >
+      <li
+        className="breadcrumb-item"
+      >
+        Home 
+        &gt;
+      </li>
+      <li
+        className="breadcrumb-item"
+      >
+        Administration 
+        &gt;
+      </li>
+      <li
+        aria-current="page"
+        className="breadcrumb-item text-primary"
+      >
+        Logger Search
+      </li>
+    </ol>
+  </nav>
   <div
     className="d-flex align-items-end"
   >
@@ -19,7 +51,7 @@ exports[`LoggerPage snapshot 1`] = `
         className="form-control"
         name="empName"
         onChange={[Function]}
-        placeholder=""
+        placeholder="e.g admin user"
         type="text"
         value=""
       />
@@ -41,7 +73,9 @@ exports[`LoggerPage snapshot 1`] = `
       >
         <option
           value=""
-        />
+        >
+          --select--
+        </option>
       </select>
     </div>
     <div
@@ -60,7 +94,9 @@ exports[`LoggerPage snapshot 1`] = `
       >
         <option
           value=""
-        />
+        >
+          --select--
+        </option>
       </select>
     </div>
     <div
@@ -107,6 +143,7 @@ exports[`LoggerPage snapshot 1`] = `
         className="form-control"
         name="applicationId"
         onChange={[Function]}
+        placeholder="eg.173894756234504"
         type="text"
         value=""
       />

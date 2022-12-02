@@ -1,10 +1,13 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo, Suspense } from 'react';
 import { fetchLoggers } from "../../actions/loggerActions";
 import { handleSortData, handleFilterData } from "../../utils";
+import './logger.scss';
+
 import LogsTable from "../../components/table";
 import LoggerFiltters from "./filters";
 import Pagination from "../../components/pagination";
-import './logger.scss';
+import Navbar from "../../components/nav";
+
 
 const Logs = () => {
 
@@ -88,41 +91,42 @@ const Logs = () => {
         return filtered;
     }, [JSON.stringify(filters), loggersData])
 
+    const sortedData = useMemo(() => {
+        const sorted = handleSortData(sortField, sortOrder, filteredData);
+        return sorted;
+    }, [sortField, sortOrder, filteredData]);
 
-    const paginatedData = useMemo(() => {
-        const firstPageIndex = (pageNumber - 1) * pageSize;
-        const lastPageIndex = firstPageIndex + pageSize;
-        return [...filteredData].slice(firstPageIndex, lastPageIndex);
-    }, [pageNumber, filteredData]);
 
     const currentTableData = useMemo(() => {
-        const sorted = handleSortData(sortField, sortOrder, paginatedData);
-        return sorted;
-    }, [sortField, sortOrder, paginatedData]);
+        const firstPageIndex = (pageNumber - 1) * pageSize;
+        const lastPageIndex = firstPageIndex + pageSize;
+        return [...sortedData].slice(firstPageIndex, lastPageIndex);
+    }, [pageNumber, sortedData]);
 
 
     return (
         <div className="container mt-4">
+            <Navbar />
             <LoggerFiltters
                 actionTypes={actionTypes}
                 applicationTypes={applicationTypes}
                 handleFilter={handleFilter}
             />
             <div className="shadow">
-            <LogsTable
-                columns={columns}
-                data={currentTableData}
-                sortField={sortField}
-                sortOrder={sortOrder}
-                handleSorting={handleSorting}
-            />
-            <Pagination
-                className="pagination-bar"
-                currentPage={params.pageNumber}
-                totalCount={count}
-                pageSize={params.pageSize}
-                onPageChange={handleChangePage}
-            />
+                <LogsTable
+                    columns={columns}
+                    data={currentTableData}
+                    sortField={sortField}
+                    sortOrder={sortOrder}
+                    handleSorting={handleSorting}
+                />
+                <Pagination
+                    className="pagination-bar"
+                    currentPage={params.pageNumber}
+                    totalCount={count}
+                    pageSize={params.pageSize}
+                    onPageChange={handleChangePage}
+                />
             </div>
         </div>
     )
