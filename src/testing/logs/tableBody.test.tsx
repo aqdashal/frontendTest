@@ -26,4 +26,13 @@ describe('<TableBody>', () => {
     it("should render initially", () => {
         setup();
     })
+
+    test("snapshot", () => {
+        const tree = renderer.create(
+            <MemoryRouter>
+                <TableBody {...{ tableData, columns }} />
+            </MemoryRouter>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    })
 })

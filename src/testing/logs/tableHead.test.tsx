@@ -41,6 +41,16 @@ describe('<TableHead/>', () => {
         expect(screen.getByText(/Date:Time/i))
     })
 
+    it("handleSorting should not be called when no header is clicked", () => {
+        setup();
+
+        expect(screen.getByText(/Log ID/i))
+        expect(screen.getByText(/Application Type/i))
+        expect(screen.getByText(/Application ID/i))
+        expect(screen.getByText(/Action Details/i))
+        expect(screen.getByText(/Date:Time/i))
+    })
+
     test("snapshot", () => {
         const tree = renderer.create(
             <MemoryRouter>

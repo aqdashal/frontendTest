@@ -35,4 +35,14 @@ describe('<LogsTable>', () => {
         setup();
         expect(screen.getByRole("table"))
     })
+
+    test("snapshot", () => {
+        const tree = renderer.create(
+            <MemoryRouter>
+                <LogsTable {...{ data: tableData, columns: tableColumns, sortField, sortOrder, handleSorting }} />
+            </MemoryRouter>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    })
+
 })
