@@ -35,9 +35,9 @@ Test the app live on this url https://appreacttest.netlify.app/
 
 ### `Application Features`
 
-1-Application list the 10 audit logs on each page
-2-User can see more audit logs by visiting other pages using pagination tool
-3-User can filter logs by using filtering options provided
+1-Application list the 10 audit logs on each page.\
+2-User can see more audit logs by visiting other pages using pagination tool.\
+3-User can filter logs by using filtering options provided.\
 4- User can see sorted results for each columns
 
 
