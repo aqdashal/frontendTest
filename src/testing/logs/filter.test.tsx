@@ -40,13 +40,6 @@ describe('<LoggerFilter/>', () => {
         expect(screen.getByText(/Employee Name/i))
     })
 
-    // it("handleFilter should not be called when search button clicked if no filter selected", async () => {
-    //     setup();
-    //     const user = userEvent.setup();
-    //     await user.click(screen.getByRole("button", { name: /search/i }));
-    //     expect(handleFilter).toBeCalledTimes(1);
-    // });
-
     it("handleFilter should be called when search button clicked if filter selected", async () => {
         setup();
         const user = userEvent.setup();
